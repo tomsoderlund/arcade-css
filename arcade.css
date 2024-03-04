@@ -107,7 +107,7 @@ footer {
 body {
   font-family: 'Fredoka', sans-serif;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p {
@@ -184,7 +184,8 @@ a {
   transition: all 0.2s;
   color: rgba(0, 0, 0, 0.99);
   border-bottom: 1px dotted rgba(0, 0, 0, 0.99);
-  font-weight: 600;
+  font-weight: 500;
+  filter: brightness(150%);
 }
 a:hover {
   border-bottom-style: solid;
@@ -194,75 +195,6 @@ a:hover {
 .no-link,
 .no-link:hover {
   border-bottom: none;
-}
-
-/* Button */
-button,
-.button {
-  position: relative;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  display: inline-block;
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  white-space: nowrap;
-  overflow: hidden;
-  line-height: normal;
-  font-weight: normal;
-  text-align: center;
-}
-button:focus:not(:disabled):not(:hover),
-.button:focus:not(:disabled):not(:hover) {
-  border: 1px solid rgba(0, 0, 0, 0.4);
-}
-button:hover:not(:disabled),
-.button:hover:not(:disabled) {
-  opacity: 0.7;
-}
-button:hover:active,
-.button:hover:active {
-  transition: all 0.05s;
-  opacity: 0.5;
-}
-button:disabled,
-.button:disabled {
-  cursor: initial;
-  opacity: 0.3;
-}
-a.button {
-  text-decoration: none;
-}
-
-button.secondary:not(:disabled),
-.button.secondary:not(:disabled),
-.circle-menu-button:not(:disabled) {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.autosize {
-  width: unset;
-  min-width: unset;
-  height: unset;
-  min-height: unset;
-}
-
-.no-button {
-  background: none;
-  border: none;
-  box-shadow: none;
-  width: unset;
-  min-width: unset;
-  height: unset;
-  min-height: unset;
-  color: inherit;
-  padding: 0;
-  margin: 0;
-}
-
-.no-button:focus:not(:disabled):not(:hover) {
-  border: none;
 }
 
 /* fieldset flexbox bug */
@@ -279,8 +211,7 @@ fieldset,
 fieldset label,
 .fieldset label {
   color: rgba(0, 0, 0, 0.4);
-  font-size: 0.75em;
-  text-transform: uppercase;
+  font-size: 0.9em;
   margin-bottom: 0.625em;
 }
 
@@ -313,6 +244,137 @@ hr {
   height: 1px;
   margin: 1em 0;
   background: rgba(0, 0, 0, 0.2);
+}
+
+/* Input & Button shared */
+button,
+.button,
+input:not([type="radio"]):not([type="checkbox"]),
+.input,
+textarea,
+select {
+  border-radius: 1em;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  padding: 1em;
+  min-width: 20em;
+  transition: all 0.1s;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
+}
+button:last-child,
+.button:last-child,
+input:not([type="radio"]):not([type="checkbox"]):last-child,
+.input:last-child,
+textarea:last-child,
+select:last-child {
+  margin-right: unset;
+  margin-bottom: unset;
+}
+
+@media only screen and (max-width: 480px) {
+  button,
+  .button,
+  input:not([type="radio"]):not([type="checkbox"]),
+  .input,
+  textarea,
+  select {
+    width: 100%;
+    margin: 0.3em 0;
+  }
+}
+
+/* Button */
+button,
+.button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: normal;
+  font-weight: normal;
+  text-align: center;
+  padding: 1em 2em;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  box-shadow: 0 0.2em 0.3em rgba(0,0,0,0.2),
+    inset 0.2em 0.2em 0.4em rgba(255,255,255,0.6),
+    inset -0.2em -0.2em 0.4em rgba(0,0,0,0.6);
+  text-shadow: 
+    -1px -1px 0 rgba(0,0,0,0.3),  
+     1px -1px 0 rgba(0,0,0,0.3),
+    -1px  1px 0 rgba(0,0,0,0.3),
+     1px  1px 0 rgba(0,0,0,0.3);
+  transition: background-color 0.3s, box-shadow 0.2s;
+  background-color: #0ad4f7;
+  color: white;
+}
+button:focus:not(:disabled):not(:hover),
+.button:focus:not(:disabled):not(:hover) {
+}
+button:hover:not(:disabled),
+.button:hover:not(:disabled) {
+  filter: brightness(90%);
+}
+button:hover:active:not(:disabled),
+.button:hover:active:not(:disabled) {
+  filter: brightness(80%);
+  box-shadow: 0 0em 0.1em rgba(0,0,0,0.2),
+    inset 0.2em 0.2em 0.4em rgba(255,255,255,0.6),
+    inset -0.2em -0.2em 0.4em rgba(0,0,0,0.6);
+  transform: translateY(3px); /* Move down */
+}
+button:disabled,
+.button:disabled {
+  background-color: lightgray;
+  cursor: initial;
+}
+a.button {
+  text-decoration: none;
+}
+
+button.secondary:not(:disabled),
+.button.secondary:not(:disabled),
+.circle-menu-button:not(:disabled) {
+  background-color: #fec40a;
+}
+
+.autosize {
+  width: unset;
+  min-width: unset;
+  height: unset;
+  min-height: unset;
+}
+
+.no-button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  width: unset;
+  min-width: unset;
+  height: unset;
+  min-height: unset;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.no-button:focus:not(:disabled):not(:hover) {
+  border: none;
+}
+
+.no-button:hover:active:not(:disabled) {
+  box-shadow: none;
+  transform: none;
 }
 
 /* ----- Input ----- */
@@ -358,45 +420,7 @@ select:disabled {
   color: rgba(0, 0, 0, 0.4);  
 }
 
-/* Input & Button shared */
-button,
-.button,
-input:not([type="radio"]):not([type="checkbox"]),
-.input,
-textarea,
-select {
-  border-radius: 2px;
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: inherit;
-  outline: none;
-  padding: 1em;
-  min-width: 20em;
-  transition: all 0.1s;
-  margin-right: 0.3em;
-  margin-bottom: 0.3em;
-}
-button:last-child,
-.button:last-child,
-input:not([type="radio"]):not([type="checkbox"]):last-child,
-.input:last-child,
-textarea:last-child,
-select:last-child {
-  margin-right: unset;
-  margin-bottom: unset;
-}
-
-@media only screen and (max-width: 480px) {
-  button,
-  .button,
-  input:not([type="radio"]):not([type="checkbox"]),
-  .input,
-  textarea,
-  select {
-    width: 100%;
-    margin: 0.3em 0;
-  }
-}
+/* Radio & Checkbox */
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -456,6 +480,9 @@ input[type=color]::-webkit-color-swatch {
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid transparent;
   min-width: unset;
+  user-select: none;
+  box-shadow: none;
+  text-shadow: none;
 }
 .tag.selectable {
   cursor: pointer;
@@ -469,6 +496,17 @@ input[type=color]::-webkit-color-swatch {
 }
 .tag.new {
   background-color: #6ada3d;
+}
+
+button.tag:focus:not(:disabled):not(:hover) {
+}
+button.tag:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+button.tag:hover:active:not(:disabled) {
+  background-color: inherit;
+  box-shadow: unset;
+  transform: unset;
 }
 
 .tag .x-button {
