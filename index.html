@@ -121,8 +121,14 @@
     <form><input type="text" placeholder="Enter a value"><button type="button">Create</button></form>
 
     <h2>Progress Button</h2>
-    <button class="progress-animation" onClick="toggleClass(this, 'in-progress')">Progress Button</button>
-    <button class="progress-animation in-progress" onClick="toggleClass(this, 'done')">Progress Button</button>
+    <div class="flex">
+      <button class="progress-animation" onClick="toggleClass(this, 'in-progress')">Progress Button</button>
+      <button class="progress-animation in-progress" onClick="toggleClass(this, 'done')">Progress Button</button>
+    </div>
+    <div class="flex">
+      <button class="secondary progress-animation" onClick="toggleClass(this, 'in-progress')">Progress Button</button>
+      <button class="secondary progress-animation in-progress" onClick="toggleClass(this, 'done')">Progress Button</button>
+    </div>
 
     <h2>Pulsate animation</h2>
     <button class="pulsate-animation">Pulsate</button>

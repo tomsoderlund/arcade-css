@@ -670,6 +670,16 @@ button.tag:hover:active:not(:disabled) {
   background-position-x: -35%;
 }
 
+.secondary.progress-animation {
+  background: linear-gradient(
+    90deg,
+    #fec40a 0%,  #fec40a 45%,
+    #f9e5b5 55%, #f9e5b5 100%
+  );
+  background-size: 400% 100%;
+  background-position: 0% 50%;
+}
+
 .pulsate-animation {
   animation: pulsate 2s 0s ease-in-out infinite;
 }
