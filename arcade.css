@@ -274,7 +274,7 @@ select:last-child {
 }
 
 @media only screen and (max-width: 480px) {
-  button,
+  button:not(.tag),
   .button,
   input:not([type="radio"]):not([type="checkbox"]),
   .input,
@@ -476,7 +476,7 @@ input[type=color]::-webkit-color-swatch {
   border-radius: 2em;
   text-decoration: none;
   transition: all 0.2s;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   border: 1px solid transparent;
   min-width: unset;
   user-select: none;
@@ -491,7 +491,7 @@ input[type=color]::-webkit-color-swatch {
   filter: brightness(115%);
 }
 .tag.selected {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .tag.new {
   background-color: #6ada3d;
