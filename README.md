@@ -19,6 +19,12 @@ Demo: https://tomsoderlund.github.io/arcade-css/
 
 Changing color theme just by changing `background-color` of `body`:
 
+
+## Inspiration
+
+Inspired by [@KartInnka and her Tropical GUI Pack](https://creativemarket.com/K_ArtInnka/6886672-Tropical-GUI-Pack).
+
+
 ## Todo
 
 - [ ] ...
