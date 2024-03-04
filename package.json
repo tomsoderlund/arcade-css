@@ -1,0 +1,18 @@
+{
+  "name": "arcade-css",
+  "description": "Fun, Beautiful, Interactive CSS system for Games",
+  "version": "0.1.0",
+  "author": "Tom Söderlund <tom@tomsoderlund.com>",
+  "main": "arcade.css",
+  "license": "MIT",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "prepare": "rm -rf dist && mkdir -p dist/icons && uglifycss arcade.css > dist/arcade.min.css && cp icons/* dist/icons/",
+    "preview": "echo '\nNow open up http://localhost:8000/index.html\n'; python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "uglifycss": "^0.0.29"
+  }
+}
