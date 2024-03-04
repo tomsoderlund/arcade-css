@@ -1,7 +1,7 @@
 {
   "name": "arcade-css",
   "description": "Fun, Beautiful, Interactive CSS system for Games",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Tom Söderlund <tom@tomsoderlund.com>",
   "main": "arcade.css",
   "license": "MIT",

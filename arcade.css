@@ -646,8 +646,8 @@ button.tag:hover:active:not(:disabled) {
 .progress-animation {
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.9) 0%,  rgba(0, 0, 0, 0.9) 45%,
-    rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.5) 100%
+    #0ad4f7 0%,  #0ad4f7 45%,
+    #bee9f3 55%, #bee9f3 100%
   );
   background-size: 400% 100%;
   background-position: 0% 50%;
