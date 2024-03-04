@@ -497,6 +497,9 @@ input[type=color]::-webkit-color-swatch {
   background-color: #6ada3d;
 }
 
+button.tag {
+  cursor: pointer;
+}
 button.tag:focus:not(:disabled):not(:hover) {
 }
 button.tag:hover:not(:disabled) {
