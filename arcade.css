@@ -274,7 +274,7 @@ select:last-child {
 }
 
 @media only screen and (max-width: 480px) {
-  button:not(.tag),
+  button:not(.no-link):not(.tag),
   .button,
   input:not([type="radio"]):not([type="checkbox"]),
   .input,
