@@ -20,7 +20,7 @@ html {
 .color-action-primary-bg { background-color: #00ced1; }
 .color-action-primary-fg { color: #00ced1; }
 .color-action-secondary-bg { background-color: #663399; }
-.color-action-secondary-fg { color: #dbdbdb; }
+.color-action-secondary-fg { color: rgba(0, 0, 0, 0.85); }
 .color-header-bg { background-color: #dbdbdb; }
 .color-header-fg { background-color: white; }
 
@@ -299,36 +299,25 @@ button,
   font-weight: normal;
   text-align: center;
   padding: 1em 2em;
-  border: none;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-weight: 600;
-  box-shadow: 0 0.2em 0.3em rgba(0,0,0,0.2),
-    inset 0.2em 0.2em 0.4em rgba(255,255,255,0.6),
-    inset -0.2em -0.2em 0.4em rgba(0,0,0,0.6);
-  text-shadow: 
-    -1px -1px 0 rgba(0,0,0,0.3),  
-     1px -1px 0 rgba(0,0,0,0.3),
-    -1px  1px 0 rgba(0,0,0,0.3),
-     1px  1px 0 rgba(0,0,0,0.3);
+  border: 2px solid rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, box-shadow 0.2s;
   background-color: #0ad4f7;
-  color: white;
+  color: rgba(0, 0, 0, 0.6);
 }
 button:focus:not(:disabled):not(:hover),
 .button:focus:not(:disabled):not(:hover) {
 }
 button:hover:not(:disabled),
 .button:hover:not(:disabled) {
-  filter: brightness(90%);
+  filter: brightness(105%);
 }
 button:hover:active:not(:disabled),
 .button:hover:active:not(:disabled) {
-  filter: brightness(80%);
-  box-shadow: 0 0em 0.1em rgba(0,0,0,0.2),
-    inset 0.2em 0.2em 0.4em rgba(255,255,255,0.6),
-    inset -0.2em -0.2em 0.4em rgba(0,0,0,0.6);
+  filter: brightness(105%);
   transform: translateY(3px); /* Move down */
 }
 button:disabled,
@@ -387,7 +376,7 @@ select {
   resize: none;
   color: inherit;
   background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(0, 0, 0, 0.25);
   box-shadow: none;
   font-weight: inherit;
 }
@@ -399,13 +388,13 @@ input:not([type="radio"]):not([type="checkbox"]):not([type="color"]):not([type="
 .input:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.7);
 }
 input:not([type="radio"]):not([type="checkbox"]):not([type="color"]):not([type="range"]):hover:not(:disabled):not(:focus),
 .input:hover:not(:disabled):not(:focus),
 textarea:hover:not(:disabled):not(:focus),
 select:hover:not(:disabled):not(:focus) {
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.4);
 }
 input:not([type="radio"]):not([type="checkbox"]):not([type="color"]):not([type="range"]):read-only,
 textarea:read-only {

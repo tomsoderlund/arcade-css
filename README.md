@@ -22,12 +22,8 @@ Changing color theme just by changing `background-color` of `body`:
 
 ## Inspiration
 
-Inspired by [@KartInnka and her Tropical GUI Pack](https://creativemarket.com/K_ArtInnka/6886672-Tropical-GUI-Pack).
-
-
-## Todo
-
-- [ ] ...
+- Inspired by [@KartInnka and her Tropical GUI Pack](https://creativemarket.com/K_ArtInnka/6886672-Tropical-GUI-Pack).
+- v1.1.0+ inspired by Duolingo’s flat buttons.
 
 
 ## Install
